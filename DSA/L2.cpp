@@ -15,7 +15,7 @@ int main(){
 }
 */
 
-//-> Method 2
+//-> Method 2 
 /*
 #include<iostream>
 using namespace std;

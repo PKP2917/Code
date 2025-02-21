@@ -111,6 +111,7 @@ int main(){
 }
 */
 
+
 /*
 #include<iostream>
 using namespace std;
@@ -167,6 +168,7 @@ int main(){
 */
 
 
+/*
 #include<iostream>
 using namespace std;
 
@@ -189,15 +191,32 @@ void printarr(int a[], int n){
 }
 
 int intersec(int a[], int b[], int n, int m){
-    for (int i = 0; i < n; i++)
+
+    int i = 0;
+    int j = 0;
+
+    cout<<"Intersection of Two Arrays : ";
+
+    while ((i<n) && (j<m))
     {
-        for (int j = 0; j < m; j++)
+        if(a[i] == b[j])
         {
-             
-        }       
+            cout<<a[i]<<" ";
+            i++;
+            j++;
+        }
+
+        else if (a[i] < b[j])
+        {
+            i++;
+        }
+
+        else
+        {
+            j++;
+        }   
     }
 }
-
 
 int main(){
     int n;
@@ -209,7 +228,86 @@ int main(){
     cout<<"Enter m : ";
     cin>>m;
     
+    int a[n];
+    int b[m];
 
+    cout<<endl;
+    printarr(a,n);
+    cout<<endl;
+    printarr(b,m);
+    cout<<endl;
+
+    intersec(a,b,n,m);
 
     return 0;
 }
+*/
+
+
+/*
+#include <iostream>
+#include <algorithm>  
+using namespace std;
+
+void printarr(int a[], int n){
+    
+    for (int i = 0; i < n; i++)
+    {
+        cin>>a[i];
+    }
+
+    cout<<endl;
+    cout<<"Array : ";
+
+    for (int i = 0; i < n; i++)
+    {
+        cout<<a[i]<<" ";
+    }    
+    
+    cout<<endl;
+}
+
+void findPairSum(int a[], int n, int s) {
+    sort(a, a + n);  
+    int i = 0, j = n - 1;
+    bool found = false;
+
+    while (i < j) {
+        int sum = a[i] + a[j];
+
+        if (sum == s) {
+            cout << "Pair found: (" << a[i] << ", " << a[j] << ")\n";
+            found = true;
+            i++;  
+            j--;  
+        }
+        else if (sum < s) {
+            i++;  
+        }
+        else {
+            j--;  
+        }
+    }
+
+    if (!found)
+        cout << "No pair found.\n";
+}
+
+int main() {
+    int n;
+    cout<<"Enter n : ";
+    cin>>n;
+
+    int s;
+    cout<<"Enter s : ";
+    cin>>s;
+
+    int a[n];
+
+    printarr(a,n);
+    findPairSum(a, n, s);
+
+    return 0;
+}
+*/
+
