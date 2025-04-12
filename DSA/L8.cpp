@@ -12,8 +12,8 @@ int power(int a, int b){
     {
         ans = ans * a;
     }
-
-    return ans;
+ 
+    return ans;    
     
 }
 

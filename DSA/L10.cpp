@@ -258,9 +258,9 @@ void printarr(int a[], int n){
 
     cout<<endl;
     cout<<"Array : ";
-
+ 
     for (int i = 0; i < n; i++)
-    {
+    {  
         cout<<a[i]<<" ";
     }    
     
@@ -292,7 +292,7 @@ void findPairSum(int a[], int n, int s) {
     if (!found)
         cout << "No pair found.\n";
 }
-
+ 
 int main() {
     int n;
     cout<<"Enter n : ";
@@ -308,6 +308,5 @@ int main() {
     findPairSum(a, n, s);
 
     return 0;
-}
+} 
 */
-

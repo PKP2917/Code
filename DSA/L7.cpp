@@ -1,6 +1,6 @@
 //-----> C++ Problem Solving
 
-
+ 
 /*
 1)
 
@@ -94,7 +94,6 @@ int main(){
     else{
         cout<<"It is not a power of two";
     }
-    
     
     return 0;
 }

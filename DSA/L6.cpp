@@ -18,9 +18,9 @@ int main(){
 
     while (n != 0)
     {
-        int bit = ((n)&(1));
+        int bit = ((n)&(1));   -> to extract the last bit
         
-        ans = (bit * pv) + ans;
+        ans = (bit * pv) + ans;    //-> it multiplies power of 10 to the bit and then add with previous answer
 
         n = (n >> 1);
         pv *= 10;
@@ -51,16 +51,16 @@ int main(){
 
     while (n != 0)
     {
-        int digit = n%10;
+        int digit = n%10;      --> to extract the last digit
 
         if (digit == 1)
         {
-            ans = ans + pv;
+            ans = ans + pv;     //-> it add the power to 2 to the ans
         }
-
-        n = n/10;
+ 
+        n = n/10;    --> replace the bit string
         i++;
-        pv *= 2;  
+        pv *= 2;     //-> it add the power to 2 to the ans
     }
     
     cout<<ans<<endl; 

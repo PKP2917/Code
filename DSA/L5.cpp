@@ -13,13 +13,13 @@ int main(){
     int a = 8;
     int b = 2;
 
-    cout<<(a&b)<<endl;  //-> AND operator
-    cout<<(a|b)<<endl;  //-> OR operator
-    cout<<(~a)<<endl;   //-> NOT operator
+    cout<<(a&b)<<endl;  //-> AND operator  -> ((0&1 , 1&0 , 0&0) == 0) , ((1&1) = 1)
+    cout<<(a|b)<<endl;  //-> OR operator   -> ((0|1 , 1|0 , 1|1) == 1) , ((0|0) = 0)
+    cout<<(~a)<<endl;   //-> NOT operator  -> (~0 = 1) , (~1 = 0)
     cout<<(~b)<<endl;   //-> NOT operator
-    cout<<(a^b)<<endl;  //-> XOR operator
-    cout<<(a<<b)<<endl; //-> Left Shift
-    cout<<(a>>b)<<endl; //-> Right Shift
+    cout<<(a^b)<<endl;  //-> XOR operator  -> ((0^1 , 1^0) == 1) , ((1^1 , 0^0)  = 0)
+    cout<<(a<<b)<<endl; //-> Left Shift    -> Shift the bits to the left -> (0..00101 --> 0.01010)
+    cout<<(a>>b)<<endl; //-> Right Shift   -> Shift the bits to the right -> (0..00101 --> 0.00010)
     cout<<(a++)<<endl;  //-> Post Increment
     cout<<(b++)<<endl;
     cout<<(++a)<<endl;  //-> Pre Increment
@@ -60,6 +60,7 @@ int main(){
     int n;
     cout<<"Enter the number: ";
     cin>>n;
+    
     bool prime=true;
 
     for (int i = 2; i < n; i++)
@@ -332,4 +333,3 @@ int main(){
     return 0;
 }
 */
-
